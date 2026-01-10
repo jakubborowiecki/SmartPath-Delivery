@@ -664,7 +664,7 @@ class MainWindow(QMainWindow):
         '                      \nDokładne informacje o trasie w zakładce "wyniki"')
 
         path_txt = "Trasa: "
-        path_list_txt = "Lista kroków: | krok | z kąd |do kąd | paczka | wartość paczki | czy ochrona | koszt ochrony \n"
+        path_list_txt = "Lista kroków: | krok | skąd |dokąd | paczka | wartość paczki | czy ochrona | koszt ochrony \n"
 
         has_parcel = False
         parcel_letters = self.map_view.parcels_letters
@@ -715,7 +715,7 @@ class MainWindow(QMainWindow):
         results_txt += f"Kolejność odwiedzanych wierzchołków: {best_path}\n"
         results_txt += f"Dystans trasy: {best_dist:.3f} km\n"
         results_txt += f"Kolejność wykonywanych zleceń: {letters_order}\n"
-        results_txt += f"Wierchołki w których kupiono ochronę: {cities_protected}\n"
+        results_txt += f"Wierzchołki w których kupiono ochronę: {cities_protected}\n"
         results_txt += f"Przewidywany zarobek: {best_score:.0f}\n"
         results_txt += f"Czas wykonywania algorytmu: {time.time()-start_timer:.3f}s\n"
         results_txt += path_list_txt
@@ -731,3 +731,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
+
